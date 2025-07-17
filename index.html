@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastLance</title>
+    <link rel="icon" type="image/png" href="images/site-logo_2.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="aside">
+         <div class="logo">
+             <span><img class="site-logo" src="images\site-logo_2.png" alt="loading..."/></span>
+         </div>
+         <div class="nav-toggler">
+             <span></span>
+         </div>
+         <ul class="nav">
+            <li><a href="#home" onclick="showSection('home')"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="assets/services.html" onclick="showSection('services')"><i class="fa fa-list"></i>Services</a></li>
+            <li><a href="assets/contactus.html" onclick="showSection('contact')"><i class="fa fa-comments"></i>Contact Us</a></li>
+            <li><a href="login/login.html"><i class="fa fa-sign-in"></i>Login</a></li>
+          </ul>
+          
+      </div>
+
+      <section class="home active section" id="home">
+
+              <div class="container">
+
+                  <div class="home-info">
+                    <h3 class="intro">TRANSPORT FACILITY IN HEALTHCARE
+                      <span class="name"><br>across Chennai</span></h3>
+                      <h3 class="my-profession"><span class="typing"></span></h3>
+                               <p>
+                                   <ul class="home-content">
+                                    <li>24/7 emergency & medical transportation support.</li>
+                                    <li>Ensuring professional medical care throughout the medical transport journey.
+                                    </li>
+                                  </ul>
+                              </p>
+                              <br>
+                              <button class="btn" onclick="window.location.href='info.html';">BOOK AMBULANCE</button>
+                               <!-- <input type="button" value="BOOK AMBULANCE" class="btn" onclick="href='http://127.0.0.1:8000'"> -->
+                  </div>
+              </div>
+              <img class="home-img" src="images\ambulancesite.jpg" alt="">
+          </section>
+
+          
+           
+
+    </div>
+<!-- Chat Button -->
+<div class="chat-container">
+    <button id="chatButton" onclick="toggleChat()">
+      <img src="https://img.icons8.com/ios-filled/24/ffffff/chat.png" alt="Chat Icon">
+    </button>
+
+    <div id="chatBubble" class="chat-bubble">
+      💬 Chat with Bot
+    </div>
+  </div>
+<script>
+  document.getElementById("chatButton").addEventListener("click", function () {
+    // Navigate to the Streamlit chatbot app
+    window.location.href = "https://basicchatbotforemergencypurposes-4j5pttqfiskmnmt5cv3exr.streamlit.app/";
+  });
+</script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+    <script>
+        function genMap()
+        {
+            fetch('http://127.0.0.1:5000/map')
+            .then(()=>window.location.href="info.html")
+        }
+    </script>
+  </body>
+</html> 
